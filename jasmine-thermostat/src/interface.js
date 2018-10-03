@@ -14,9 +14,9 @@ $(document).ready(function() {
   });
 
   $("button").click(function(event) {
-    if (thermostat.temperature <= 18) {
+    if (thermostat.temperature < 18) {
       $(".powerUsage").css("color", "green");
-    } else if (thermostat.temperature < 25) {
+    } else if (thermostat.temperature >= 18 && thermostat.temperature <= 25) {
       $(".powerUsage").css("color", "brown");
     } else {
       $(".powerUsage").css("color", "red");
