@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="../main.css">
 </head>
 <body>
 
-  <button>Up</button>
-  <button>Down</button>
-  <button>Reset</button>
-  <button>Power Saving Mode:</button>
+  <button id='increaseButton'>Up</button>
+  <button id="decreaseButton">Down</button>
+  <button id="resetButton">Reset</button>
+  <button id="powerSavingButtonOn">Power Saving Mode: On</button>
+  <button id="powerSavingButtonOff">Power Saving Mode: Off</button>
   <div>
-    <h2>Current temperature is 20</h2>
-    <h3>Power Saving Mode: On</h3>
-    <h3>Current usage: Medium</h3>
+    <h2>Current temperature is <span class="currentTemperature"></span></h2>
+    <h3>Power Saving Mode: <span class="PSMOn"></span></h3>
+    <h3>Current usage: <span class="powerUsage"></span></h3>
   </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src='src/interface.js'></script>
+  <script src="src/thermostat.js"></script>
 </body>
 </html>

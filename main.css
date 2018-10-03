@@ -1,0 +1,9 @@
+.currentTemperature {
+  color: red;
+}
+
+button {
+  font-size: 2rem;
+  text-align: center;
+  display: inline-block;
+}

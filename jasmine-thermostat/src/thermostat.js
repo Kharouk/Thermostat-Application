@@ -1,5 +1,4 @@
 "use strict";
-
 function Thermostat() {
   this.MINIMUM_TEMPERATURE = 10;
   this.temperature = 20;
@@ -13,13 +12,18 @@ Thermostat.prototype.getCurrentTemperature = function() {
 };
 
 Thermostat.prototype.up = function() {
-  if (this.isMaximumTemperature()) {
-    return;
-  }
-
-  if (this.temperature > this.MAX_LIMIT_PSM_OFF) {
+  // if (this.isMaximumTemperature()) {
+  //   return;
+  // }
+  if (
+    this.temperature >= this.MAX_LIMIT_PSM_OFF &&
+    this.powerSavingMode === false
+  ) {
     throw new Error("Can't exceed max temp!");
-  } else if (this.temperature > this.MAX_LIMIT_PSM_ON) {
+  } else if (
+    this.temperature >= this.MAX_LIMIT_PSM_ON &&
+    this.powerSavingMode === true
+  ) {
     throw new Error("Can't exceed max temp!");
   } else {
     this.temperature += 1;
