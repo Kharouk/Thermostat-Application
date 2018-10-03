@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../main.css">
 </head>
 <body>
-
   <button id='increaseButton'>Up</button>
   <button id="decreaseButton">Down</button>
   <button id="resetButton">Reset</button>
@@ -16,10 +15,13 @@
   <button id="powerSavingButtonOff">Power Saving Mode: Off</button>
   <div>
     <h2>Current temperature is <span class="currentTemperature"></span></h2>
-    <h3>Power Saving Mode: <span class="PSMOn"></span></h3>
+    <h3>Power Saving Mode: <span class="PSM"></span></h3>
     <h3>Current usage: <span class="powerUsage"></span></h3>
   </div>
 
+  <div>
+    <p id="errorMessage"></p>
+  </div>
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="

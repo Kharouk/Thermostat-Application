@@ -37,11 +37,13 @@ $(document).ready(function() {
 
   $("#powerSavingButtonOn").click(function(event) {
     thermostat.switchPowerSavingModeOn();
-    $(".PSMOn").text("On");
+    $(".PSM").text("On");
   });
 
   $("#powerSavingButtonOff").click(function(event) {
     thermostat.switchPowerSavingModeOff();
-    $(".PSMOn").text("Off");
+    $(".PSM").text("Off");
   });
+
+  $("#errorMessage").text("error");
 });

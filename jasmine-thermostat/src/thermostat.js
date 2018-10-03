@@ -12,9 +12,6 @@ Thermostat.prototype.getCurrentTemperature = function() {
 };
 
 Thermostat.prototype.up = function() {
-  // if (this.isMaximumTemperature()) {
-  //   return;
-  // }
   if (
     this.temperature >= this.MAX_LIMIT_PSM_OFF &&
     this.powerSavingMode === false
