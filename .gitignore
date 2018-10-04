@@ -2,3 +2,4 @@
 .vscode
 node_modules
 jasmine-thermostat/src/env.js
+app/public/env.js
