@@ -6,20 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../main.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-  <button id='increaseButton'>Up</button>
-  <button id="decreaseButton">Down</button>
-  <button id="resetButton">Reset</button>
-  <button id="powerSavingButtonOn">Power Saving Mode: On</button>
-  <button id="powerSavingButtonOff">Power Saving Mode: Off</button>
+  <div class='buttons'>
+    <button id='increaseButton'>Up</button>
+    <button id="decreaseButton">Down</button>
+    <button id="resetButton">Reset</button>
+    <button id="powerSavingButtonOn">Power Saving Mode: On</button>
+    <button id="powerSavingButtonOff">Power Saving Mode: Off</button>
+  </div>
+
+  <div class='text-body'>
   <div>
     <h2>Current temperature is <span class="currentTemperature"></span></h2>
     <h3>Power Saving Mode: <span class="PSM"></span></h3>
     <h3>Current usage: <span class="powerUsage"></span></h3>
   </div>
-  <div class="cityTemperature">London's Temperature is <span id="apiDegree"></span> °C </div>
 
+  <div class="cityTemperature"><span id="city">London</span>'s Temperature is <span id="apiDegree">17</span> °C </div>
+
+  <div class="choose-location">
+      <input type="text" id="apiCity" placeholder="Enter City"/>
+      <input type="submit" id="btn-submit" value="Submit">
+    </div>
+</div>
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src='src/env.js'></script>

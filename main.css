@@ -1,13 +1,63 @@
+body {
+  background-image: url('https://i.pinimg.com/originals/de/fa/dc/defadc1400875bad29f74179352c606c.jpg');
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
 .currentTemperature {
   color: red;
 }
 
 button {
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
   display: inline-block;
+  cursor: pointer;
+  color: coral;
+  background-color: black;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cityTemperature {
   font-size: 2rem;
+}
+
+
+.text-body {
+  text-align: center;
+}
+
+.choose-location {
+  padding-top: 3%;
+
+}
+
+#city {
+  font-size: 2em;
+}
+
+#apiDegree {
+  font-size: 2em;
+}
+
+#apiCity {
+  font-size: 1em;
+  text-align: center;
+}
+
+#btn-submit {
+  font-size: 1em;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: coral;
 }

@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
+  $(".PSM").text("On");
   $(".currentTemperature").text(thermostat.temperature);
-  $(".PSMOn").text("On");
 
   // Find better way then having this in every event?
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
     $(".currentTemperature").text(thermostat.temperature);
   });
 
-  $("#resetButton").click(function(event) {
+  $("#resetButton").click(function() {
     thermostat.reset();
     $(".powerUsage").text(thermostat.powerUsage());
     $(".currentTemperature").text(thermostat.temperature);
@@ -47,13 +47,17 @@ $(document).ready(function() {
 
   // $("#errorMessage").text("error");
 
-  $.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${
-      keys.API_KEY
-    }&units=metric`,
-    function(temperature) {
-      var result = temperature.main.temp;
-      $("#apiDegree").text(result);
-    }
-  );
+  $("#btn-submit").click(function() {
+    var result = $("#apiCity").val();
+    $("#city").text(result);
+    $.get(
+      `http://api.openweathermap.org/data/2.5/weather?q=${result}&APPID=${
+        keys.API_KEY
+      }&units=metric`,
+      function(temperature) {
+        var result = temperature.main.temp;
+        $("#apiDegree").text(result);
+      }
+    );
+  });
 });
